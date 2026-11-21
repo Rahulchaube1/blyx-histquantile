@@ -1,0 +1,13 @@
+use histquantile;
+
+fn main() {
+    let counts = [0, 2, 6];
+    let probability = 0.5;
+    let result = histquantile_bucket(counts, probability);
+    if len(result) == 0 { println!("invalid"); return; }
+    let mut i = 0;
+    while i < len(result) {
+        println!(at(result, i));
+        i += 1;
+    }
+}
